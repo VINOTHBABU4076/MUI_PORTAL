@@ -1,0 +1,41 @@
+
+.te {
+    margin: 0 auto;
+    max-width: 800px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid black;
+  }
+  
+  th, td {
+    padding: 8px;
+    border: 1px solid black;
+  }
+  
+  @media (max-width: 600px) {
+    .te {
+      max-width: 90%; 
+      color: green;
+      background-color: khaki;
+    }
+  }
+  
+  @media (min-width: 601px) and (max-width: 1024px) {
+    th, td {
+      font-size: 14px;
+      background-color: aqua;
+      color:saddlebrown;
+    }
+  }
+  
+  @media (min-width: 1025px) {
+    th, td {
+      font-size: 16px;
+      background-color: burlywood;
+      color: brown; 
+    }
+  }
+  
