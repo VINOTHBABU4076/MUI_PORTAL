@@ -1,6 +1,6 @@
 import React from 'react'
 import Tables from "./Tables"
-import Tabless from "./Tabless.css"
+
 
  const Tables2 = () => {
     const arr=[
