@@ -28,6 +28,7 @@ const Todos = () => {
                 name: name
             }
         })
+        setname('')
 
     }
     console.log(Todo)

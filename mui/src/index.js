@@ -15,10 +15,19 @@ import Usereducer from './Usereducer';
 import Todos from './Todos';
 import Fetchdata from './Fetchdata';
 import Second from './Axios';
+import Keys from './Keys';
+import Register from './Register';
+import Parent from './Parent';
+import  Axios  from './Axios';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-  <Second />
+  <Fetchdata/>
+  {/* <Keys />   */}
+  {/* <Register /> */}
+  {/* <Parent / */}
+  {/* <Todos /> */}
+  {/* <Axios /> */}
   </React.StrictMode>
 );
 

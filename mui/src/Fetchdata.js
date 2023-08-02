@@ -1,43 +1,37 @@
-import React, { useEffect, useState } from 'react';
+  import React, { useEffect, useState } from 'react';
 
-const Fetchdata = () => {
-  const [records, setRecords] = useState([]);
-
-
-  useEffect(() => {
+  const Fetchdata = () => {
+    const [records, setRecords] = useState([]);
 
 
-    const fetchData = async () => {
-      try {
-        const response = await fetch('https://jsonplaceholder.typicode.com/users');
-        if (response.ok) {
-          const data = await response.json();
-          setRecords(data);
-          console.log(data);
-        } else {
-          console.log('Request failed:', response.status);
-        }
-      } catch (error) {
-        console.log('Error fetching data:', error);
-      }
-    };
-   
+    useEffect(() => {
+      fetch(`https://jsonplaceholder.typicode.com/users`)
+      .then(response =>{
+        if(!response.ok){
+          console.log("Throw an error");
+          return
+        };
+        return response.json();
+      })
+      .then(data =>{
+        console.log(data)
+        setRecords(data)
+      })
+      .catch(error =>{
+        console.loh("error")
+      })
+    },[])
+    return (
+      <div>
+        <ul>
+          {records.map((list, index) => (
+            <li key={index}>
+              {list.id} | {list.name}
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
+  };
 
-    fetchData();
-  }, []);
-
- 
-  return (
-    <div>
-      <ul>
-        {records.map((list, index) => (
-          <li key={index}>
-            {list.id} | {list.name}
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-};
-
-export default Fetchdata;
+  export default Fetchdata;

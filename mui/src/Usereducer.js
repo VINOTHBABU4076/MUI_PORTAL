@@ -12,10 +12,7 @@ function reducer(state, action) {
             { count: state.count - 1 })
     }
 }
-
-
-
-    const Reduce = () => {
+const Reduce = () => {
         const [state, dispatch] = useReducer(reducer, { count: 0 })
 
         function handleincrement() {
