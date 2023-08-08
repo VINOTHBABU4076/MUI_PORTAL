@@ -4,8 +4,10 @@ import { useAuth } from './Auth'
 
  const Login = () => {
     const[user,setuser]=useState('')
+
     const auth=useAuth()
     const navigate=useNavigate()
+    
     const handlechange =() =>{
         auth.login(user)
         navigate('/')
