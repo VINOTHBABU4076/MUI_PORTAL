@@ -1,7 +1,10 @@
 {
   "dependencies": {
+    "axios": "^1.4.0",
     "bootstrap": "^5.3.1",
     "bootstrap-icons": "^1.10.5",
-    "react-bootstrap": "^2.8.0"
+    "react-bootstrap": "^2.8.0",
+    "react-lazy-load": "^4.0.1",
+    "react-lazy-load-image-component": "^1.6.0"
   }
 }
