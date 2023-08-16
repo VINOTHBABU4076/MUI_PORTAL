@@ -10,6 +10,7 @@ function Create() {
   const [checked, setChecked] = useState(false);
   const navigate=useNavigate();
 
+
   const postData = async () => {
     await axios.post(API_URL, {
       firstName,
